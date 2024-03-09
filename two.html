@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nearest Odd Numbers</title>
+</head>
+<body>
+    <h1>FINDING Nearest ODD NUMBER</h1>
+
+<script>
+    // Function to find the nearest odd number
+    function findNearestOdd(number) {
+        return (number % 2 === 1) ? number : (number % 2 === 0) ? number + 1 : number - 1;
+    }
+
+    // Get numbers from the user and display nearest odd numbers
+    let input = prompt("Enter numbers (comma-separated):");
+
+    if (input !== null) {
+        let numbers = input.split(',').map(Number);
+
+        let result = numbers.map(num => findNearestOdd(num));
+
+        alert("Nearest odd numbers: " + result.join(', '));
+    }
+</script>
+
+</body>
+</html>

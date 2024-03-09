@@ -1,0 +1,175 @@
+h1{
+    color: blueviolet;
+    background-color: rgb(42, 81, 165);
+
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.parent-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-color: #e41467;
+    margin: 50px auto;
+}
+
+.relative-to-parent {
+    position: relative;
+    top: 20px;
+    left: 1px;
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px;
+}
+
+.relative-to-self {
+    position: relative;
+    top: 50px;
+    left: px;
+    background-color: #e7de3c;
+    color: #fff;
+    padding: 10px;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    position: relative;
+    width: 300px;
+    height: 200px;
+}
+
+.element1, .element2 ,.element3{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    line-height: 100px;
+}
+
+.element1 {
+    top: 50px;
+    left: 50px;
+}
+
+.element2 {
+    top: 200px;
+    left: 50px;
+}
+.element3 {
+    top: 350px;
+    left: 50px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('background.jpg'); /* Replace 'background.jpg' with your image path */
+    background-repeat: repeat; /* Options: repeat, repeat-x, repeat-y, no-repeat */
+    background-size: cover; /* Ensures the background covers the entire viewport */
+}
+
+.container {
+    text-align: center;
+    padding: 50px;
+}
+
+h1 {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5); /* Adding a semi-transparent background for better visibility */
+    padding: 20px;
+}
+
+
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header styling */
+.header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Content section styling */
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+/* Article styling */
+.article {
+    flex-basis: 70%;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* Sidebar styling */
+.sidebar {
+    flex-basis: 25%;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* Footer styling */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.box1 {
+    float: left;
+}
+
+.box2 {
+    float: right;
+}
+
+

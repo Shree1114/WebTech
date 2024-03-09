@@ -1,0 +1,32 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visitor Counter</title>
+</head>
+<body>
+
+    <h1>Welcome to Our Website</h1>
+
+    <%
+        // Retrieve the current visitor count from the application scope
+        Integer visitorCount = (Integer) application.getAttribute("visitorCount");
+
+        // If it's the first visit, initialize the count to 1
+        if (visitorCount == null) {
+            visitorCount = 1;
+        } else {
+            // Increment the visitor count for each subsequent visit
+            visitorCount++;
+        }
+
+        // Store the updated visitor count in the application scope
+        application.setAttribute("visitorCount", visitorCount);
+    %>
+
+    <p>You are visitor number <%= visitorCount %> on our website.</p>
+
+</body>
+</html>

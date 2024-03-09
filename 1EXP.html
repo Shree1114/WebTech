@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picture Slider</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #slider-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        #slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
+        input[type="radio"] {
+            display: none;
+        }
+
+        .slider-controls {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        label {
+            cursor: pointer;
+            margin: 0 5px;
+            background-color: #3498db;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        input[type="radio"]:checked + label {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="slider-container">
+        <div id="slider">
+            <div class="slide"><img src="D:\Downloads\Alice in Borderland fan art.jpg" alt="Image 1"></div>
+            <div class="slide"><img src="D:\Downloads\Credits to @cainternn on Twitter.jpg" alt="Image 2"></div>
+            <div class="slide"><img src="D:\Downloads\Credits to @cainternn on Twitter.jpg" alt="Image 3"></div>
+            <!-- Add more slides as needed -->
+        </div>
+    </div>
+
+    <div class="slider-controls">
+        <input type="radio" id="radio1" name="slider" checked>
+        <label for="radio1" onclick="changeSlide(0)">1</label>
+        
+        <input type="radio" id="radio2" name="slider">
+        <label for="radio2" onclick="changeSlide(1)">2</label>
+        
+        <input type="radio" id="radio3" name="slider">
+        <label for="radio3" onclick="changeSlide(2)">3</label>
+        <!-- Add more radio buttons and labels as needed -->
+    </div>
+
+    <script>
+        let currentSlide = 0;
+
+        function changeSlide(index) {
+            const slider = document.getElementById('slider');
+            const slideWidth = document.querySelector('.slide').offsetWidth;
+
+            currentSlide = index;
+            const newTransformValue = -index * slideWidth;
+            slider.style.transform = `translateX(${newTransformValue}px)`;
+        }
+    </script>
+
+</body>
+</html>

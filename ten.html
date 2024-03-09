@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background GIF with CSS</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            height: 100vh;
+            background: url('your-background.gif') center center fixed;
+            background-size: cover;
+            transition: all 0.5s ease; /* Adding transition effect for smooth changes */
+        }
+
+        /* Adjustments for background */
+        #backgroundAdjustments {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(255, 255, 255, 0.5); /* Adding transparency to a white container */
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        /* Style for adjustment controls */
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="backgroundAdjustments">
+        <label for="height">Height:</label>
+        <input type="range" id="height" min="100" max="1000" step="10" onchange="adjustBackground()">
+        
+        <label for="width">Width:</label>
+        <input type="range" id="width" min="100" max="1000" step="10" onchange="adjustBackground()">
+
+        <label for="transparency">Transparency:</label>
+        <input type="range" id="transparency" min="0" max="1" step="0.1" onchange="adjustBackground()">
+    </div>
+
+    <script>
+        function adjustBackground() {
+            // Get the values from the input elements
+            const heightValue = document.getElementById("height").value + "px";
+            const widthValue = document.getElementById("width").value + "px";
+            const transparencyValue = document.getElementById("transparency").value;
+
+            // Apply the changes to the body style
+            document.body.style.height = heightValue;
+            document.body.style.width = widthValue;
+            document.body.style.background = `rgba(255, 255, 255, ${transparencyValue})`;
+        }
+    </script>
+</body>
+</html>
